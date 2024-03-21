@@ -17,8 +17,8 @@
         "@types/js-yaml": "^4.0.9",
         "@types/node": "^20.11.10",
         "@types/quicklink": "^2.3.4",
-        "@typescript-eslint/eslint-plugin": "^7.0.1",
-        "@typescript-eslint/parser": "^7.0.2",
+        "@typescript-eslint/eslint-plugin": "^6.20.0",
+        "@typescript-eslint/parser": "^6.20.0",
         "eslint": "^8.56.0",
         "eslint-config-standard": "~17",
         "eslint-plugin-import": "^2.29.1",
@@ -28,7 +28,7 @@
         "typescript": "^5.3.3"
     },
     "dependencies": {
-        "@waline/client": "^3.1.2",
+        "@waline/client": "^3.0.1",
         "vue": "^3.4.15",
         "@algolia/client-search": "^4.22.1",
         "algoliasearch": "4.22.1",
@@ -44,7 +44,7 @@
         "theme-shokax-anime": "^0.0.6",
         "theme-shokax-pjax": "^0.0.3",
         "twikoo": "^1.6.31",
-        "unlazy": "^0.11.1",
+        "unlazy": "^0.10.4",
         "hexo-lightning-minify": "latest",
         "hexo-algoliasearch": "latest",
         "hexo-feed": "latest",
