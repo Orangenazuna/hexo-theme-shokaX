@@ -263,8 +263,28 @@ $item {
     &:hover {
       box-shadow: 0 0 2rem var(--box-bg-shadow);
 
+      .cover {    // 新增
+        filter: brightness(.3);
+      }
+
       .cover img {
-        transform: scale(1.05) rotate(1deg);
+        transform: scale(1.25) rotate(2deg);
+      }
+
+      .info {
+        width: 75%;
+        +mobile(){
+          width: 100%;
+        }
+      }
+
+      .info h3{
+        margin: .625rem 0;
+        color: var(--color-green);
+      }
+
+      .excerpt {
+        opacity: 1;
       }
     }
   }
@@ -275,6 +295,7 @@ $item {
     clip-path: polygon(0 0, 92% 0%, 100% 100%, 0% 100%);
     border-radius: .625rem 0 0 .625rem;
     overflow: hidden;
+    the-transition();
 
     +mobile() {
       width: 100%;
@@ -297,6 +318,7 @@ $item {
     width: 50%;
     padding: 1rem 1.5rem 3rem 0;
     perspective: 62.5rem;
+    the-transition();
 
     +mobile() {
       width: 100%;
@@ -317,21 +339,25 @@ $item {
     }
 
     h3 {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      margin: .625rem 0;
-      color: var(--primary-color);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 3.525rem 0 0 0;
+        color: var(--primary-color);
+        the-transition-margin();  // 平滑过渡
     }
 
     .excerpt {
-      overflow: hidden;
-      font-size: $font-size-small;
-      max-height: 5rem;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
-      text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: $font-size-small;
+          max-height: 5rem;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          text-overflow: ellipsis;
+          opacity: 0;   // 不显示
+          pointer-events: none;
+          the-transition();  // 平滑过渡
     }
 
   }
@@ -349,6 +375,7 @@ $item {
       margin-left: 1.5rem;
       clip-path: polygon(0 0%, 100% 0%, 100% 100%, 8% 100%);
       border-radius: 0 .625rem .625rem 0;
+      
 
       +mobile() {
         width: 100%;
@@ -384,7 +411,7 @@ $item {
 
     &:hover {
       .cover img {
-        transform: scale(1.05) rotate(-1deg);
+        transform: scale(1.25) rotate(-2deg);
       }
     }
   }

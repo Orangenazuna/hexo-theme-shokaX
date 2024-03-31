@@ -4,6 +4,10 @@ the-transition(duration = .2s, function = ease-in-out, delay = 0s, property = al
   transition:property duration function delay;
 }
 
+the-transition-margin(duration = .3s, function = ease, delay = 0s, property = margin) {
+	transition:property duration function delay;
+}
+
 mobile-smallest() {
   @media (max-width: 413px) {
     {block};
